@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Modern professional color palette - Light mode */
+        --background: 0.99 0.005 240;
+        --foreground: 0.20 0.015 240;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.20 0.015 240;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.20 0.015 240;
+        
+        /* Primary: Modern blue */
+        --primary: 0.55 0.18 250;
+        --primary-foreground: 0.98 0.01 250;
+        
+        /* Secondary: Teal accent */
+        --secondary: 0.65 0.12 200;
+        --secondary-foreground: 0.98 0.01 200;
+        
+        /* Accent: Vibrant cyan */
+        --accent: 0.70 0.15 220;
+        --accent-foreground: 0.98 0.01 220;
+        
+        --muted: 0.96 0.01 240;
+        --muted-foreground: 0.50 0.02 240;
+        
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.01 25;
+        
+        --border: 0.92 0.01 240;
+        --input: 0.92 0.01 240;
+        --ring: 0.55 0.18 250;
+        
+        /* Semantic colors */
+        --success: 0.60 0.15 145;
+        --success-foreground: 0.98 0.01 145;
+        
+        --warning: 0.65 0.18 70;
+        --warning-foreground: 0.20 0.015 70;
+        
+        --info: 0.60 0.16 240;
+        --info-foreground: 0.98 0.01 240;
+    }
+    
+    .dark {
+        /* Modern professional color palette - Dark mode */
+        --background: 0.18 0.015 240;
+        --foreground: 0.95 0.01 240;
+        
+        --card: 0.22 0.02 240;
+        --card-foreground: 0.95 0.01 240;
+        
+        --popover: 0.22 0.02 240;
+        --popover-foreground: 0.95 0.01 240;
+        
+        /* Primary: Bright blue for dark mode */
+        --primary: 0.65 0.20 250;
+        --primary-foreground: 0.98 0.01 250;
+        
+        /* Secondary: Bright teal */
+        --secondary: 0.70 0.14 200;
+        --secondary-foreground: 0.98 0.01 200;
+        
+        /* Accent: Bright cyan */
+        --accent: 0.75 0.17 220;
+        --accent-foreground: 0.98 0.01 220;
+        
+        --muted: 0.28 0.02 240;
+        --muted-foreground: 0.65 0.02 240;
+        
+        --destructive: 0.60 0.24 25;
+        --destructive-foreground: 0.98 0.01 25;
+        
+        --border: 0.32 0.02 240;
+        --input: 0.32 0.02 240;
+        --ring: 0.65 0.20 250;
+        
+        /* Semantic colors */
+        --success: 0.65 0.17 145;
+        --success-foreground: 0.98 0.01 145;
+        
+        --warning: 0.70 0.20 70;
+        --warning-foreground: 0.20 0.015 70;
+        
+        --info: 0.65 0.18 240;
+        --info-foreground: 0.98 0.01 240;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    /* Enhanced typography system */
+    .heading-1 {
+        @apply text-4xl md:text-5xl font-bold tracking-tight leading-tight;
+    }
+    
+    .heading-2 {
+        @apply text-3xl md:text-4xl font-bold tracking-tight leading-tight;
+    }
+    
+    .heading-3 {
+        @apply text-2xl md:text-3xl font-semibold tracking-tight leading-snug;
+    }
+    
+    .body-large {
+        @apply text-lg leading-relaxed;
+    }
+    
+    .body-default {
+        @apply text-base leading-relaxed;
+    }
+    
+    .caption {
+        @apply text-sm text-muted-foreground leading-normal;
+    }
+    
+    .label {
+        @apply text-sm font-medium leading-none;
+    }
+}

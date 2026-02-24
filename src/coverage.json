@@ -1,0 +1,293 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T17:02:09.449Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 12,
+    "implemented": 12,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Build an assistance request system where farmers can submit requests for technical support teams, post-harvest management help, and other farming assistance needs, with tracking of request status",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/AssistanceRequestPage.tsx",
+          "frontend/src/components/AssistanceRequestForm.tsx",
+          "frontend/src/components/AssistanceRequestCard.tsx",
+          "frontend/src/pages/MyRequestsPage.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Layout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/AssistanceRequestPage.tsx",
+          "frontend/src/components/AssistanceRequestForm.tsx",
+          "frontend/src/components/AssistanceRequestCard.tsx",
+          "frontend/src/pages/MyRequestsPage.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Layout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Redesign the entire platform with a clean, modern, simplified layout that replaces the current earth-toned color palette with a fresh, contemporary color scheme suitable for a global professional platform",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/DashboardPage.tsx",
+          "frontend/src/pages/MarketplacePage.tsx",
+          "frontend/src/pages/KnowledgeHubPage.tsx",
+          "frontend/src/components/MetricCard.tsx",
+          "frontend/src/components/ProduceListingCard.tsx",
+          "frontend/src/components/KnowledgeArticleCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/DashboardPage.tsx",
+          "frontend/src/pages/MarketplacePage.tsx",
+          "frontend/src/components/MetricCard.tsx",
+          "frontend/src/components/ProduceListingCard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Enhance the platform with support for displaying pictures and videos throughout the interface, including in farmer profiles, produce listings, knowledge hub articles, and assistance requests",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/FarmerRegistrationPage.tsx",
+          "frontend/src/components/CreateListingForm.tsx",
+          "frontend/src/components/ProduceListingCard.tsx",
+          "frontend/src/pages/KnowledgeHubPage.tsx",
+          "frontend/src/components/KnowledgeArticleCard.tsx",
+          "frontend/src/components/AssistanceRequestForm.tsx",
+          "frontend/src/components/AssistanceRequestCard.tsx",
+          "frontend/src/components/ImageUploader.tsx",
+          "frontend/src/components/VideoUploader.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ProduceListingCard.tsx",
+          "frontend/src/components/AssistanceRequestForm.tsx",
+          "frontend/src/components/AssistanceRequestCard.tsx",
+          "frontend/src/components/ImageUploader.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Redesign the navigation system to be more intuitive and user-friendly, with clear menu structure, improved mobile responsiveness, and easier access to key features for farmers and institutions",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/components/MobileMenu.tsx",
+          "frontend/src/components/NavigationGroup.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Layout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Implement multi-language support infrastructure that allows the platform interface to be displayed in local languages, with language selection available to users",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/contexts/LanguageContext.tsx",
+          "frontend/src/hooks/useTranslation.ts",
+          "frontend/src/locales/en.json",
+          "frontend/src/locales/index.ts",
+          "frontend/src/components/LanguageSelector.tsx",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/main.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LanguageSelector.tsx",
+          "frontend/src/components/Layout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Create a text-based chat assistance system for farmers to get help with platform features, farming questions, and assistance requests without requiring voice processing",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ChatWidget.tsx",
+          "frontend/src/components/ChatMessage.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/components/Layout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ChatWidget.tsx",
+          "frontend/src/components/ChatMessage.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/components/Layout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Replace the current rural-urban flow visualization with a visual directory organized by region and district, allowing farmers and institutions to browse and filter by geographic location",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/GeographicDirectory.tsx",
+          "frontend/src/components/RegionCard.tsx",
+          "frontend/src/pages/DashboardPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/GeographicDirectory.tsx",
+          "frontend/src/components/RegionCard.tsx",
+          "frontend/src/pages/DashboardPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Add prominent, clear call-to-action buttons throughout the platform that guide users to key actions like registering, creating listings, submitting requests, and accessing assistance",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CTAButton.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/MarketplacePage.tsx",
+          "frontend/src/pages/KnowledgeHubPage.tsx",
+          "frontend/src/pages/DashboardPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CTAButton.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/MarketplacePage.tsx",
+          "frontend/src/pages/DashboardPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Improve captions and content presentation across all pages with better typography, spacing, and content hierarchy to enhance readability and user comprehension",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/SectionHeading.tsx",
+          "frontend/src/components/ContentCard.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/MarketplacePage.tsx",
+          "frontend/src/pages/KnowledgeHubPage.tsx",
+          "frontend/src/pages/DashboardPage.tsx",
+          "frontend/src/pages/FarmerRegistrationPage.tsx",
+          "frontend/src/pages/InstitutionRegistrationPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/SectionHeading.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/MarketplacePage.tsx",
+          "frontend/src/pages/DashboardPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Create a farmer salary management dashboard that displays salary information, payment history, and compensation details for registered farmers",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/SalaryDashboardPage.tsx",
+          "frontend/src/components/SalaryHistoryTable.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Layout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/SalaryDashboardPage.tsx",
+          "frontend/src/components/SalaryHistoryTable.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Layout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Implement insurance coverage tracking integrated with farmer compensation packages, allowing farmers to view their insurance details and coverage status",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/InsuranceCoverageCard.tsx",
+          "frontend/src/pages/SalaryDashboardPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/InsuranceCoverageCard.tsx",
+          "frontend/src/pages/SalaryDashboardPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Create a PF (Provident Fund) management and tracking system where farmers can view their PF contributions, balance, and withdrawal history",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/PFAccountPage.tsx",
+          "frontend/src/components/PFStatementTable.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/pages/SalaryDashboardPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/PFAccountPage.tsx",
+          "frontend/src/components/PFStatementTable.tsx",
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/App.tsx",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/pages/SalaryDashboardPage.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/assistance-flow.dim_800x400.png",
+    "frontend/public/assets/generated/default-profile.dim_300x300.png",
+    "frontend/public/assets/generated/hero-banner.dim_1920x600.png",
+    "frontend/public/assets/generated/salary-icons.dim_400x400.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/AssistanceRequestCard.tsx",
+    "frontend/src/components/AssistanceRequestForm.tsx",
+    "frontend/src/components/CTAButton.tsx",
+    "frontend/src/components/ChatMessage.tsx",
+    "frontend/src/components/ChatWidget.tsx",
+    "frontend/src/components/GeographicDirectory.tsx",
+    "frontend/src/components/ImageUploader.tsx",
+    "frontend/src/components/InsuranceCoverageCard.tsx",
+    "frontend/src/components/LanguageSelector.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/MetricCard.tsx",
+    "frontend/src/components/PFStatementTable.tsx",
+    "frontend/src/components/ProduceListingCard.tsx",
+    "frontend/src/components/RegionCard.tsx",
+    "frontend/src/components/SalaryHistoryTable.tsx",
+    "frontend/src/components/SectionHeading.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/pages/AssistanceRequestPage.tsx",
+    "frontend/src/pages/DashboardPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/MarketplacePage.tsx",
+    "frontend/src/pages/MyListingsPage.tsx",
+    "frontend/src/pages/MyRequestsPage.tsx",
+    "frontend/src/pages/PFAccountPage.tsx",
+    "frontend/src/pages/SalaryDashboardPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

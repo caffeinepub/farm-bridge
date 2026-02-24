@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Global agriculture platform connecting rural to urban areas with comprehensive farmer salary and benefits system including insurance and PF, supporting organic farming for institutions like temples, schools, colleges, courts, universities, and government offices",
+  "architectural_notes": [
+    "Platform connects rural farmers with urban institutions",
+    "Focus on organic farming and chemical-free produce",
+    "Target institutions: temples, schools, colleges, courts, universities, government offices",
+    "Global farmer salary and benefits system with insurance and PF management",
+    "Assistance request portal for technical support and post-harvest management",
+    "Multi-language support infrastructure for international reach",
+    "Text-based chat assistance system for farmers",
+    "Visual directory system organized by region/district",
+    "Modern, clean UI with enhanced multimedia support"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional hero banner image showing diverse farmers working with modern technology for the homepage redesign (hero-banner.dim_1920x600.png)\n- Icon set for salary dashboard including salary, insurance, and PF icons in modern minimalist style (salary-icons.dim_400x400.png)\n- Modern farmer profile placeholder image for users without uploaded photos (default-profile.dim_300x300.png)\n- Visual illustration showing the assistance request workflow from farmer to support team (assistance-flow.dim_800x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-farmer-registration-system-that-captures-farm-location-rural-urban-farm-size-farming-methods-organic-conventional-and-crop-types",
+      "title": "Create a farmer registration system that captures farm location (rural/urban), farm size, farming methods (organic/conventional), and crop types",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-institution-registration-system-for-temples-schools-colleges-courts-universities-and-government-offices-to-express-interest-in-receiving-organic-produce",
+      "title": "Create an institution registration system for temples, schools, colleges, courts, universities, and government offices to express interest in receiving organic produce",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-produce-marketplace-where-farmers-can-list-available-organic-crops-and-institutions-can-browse-and-request-produce",
+      "title": "Build a produce marketplace where farmers can list available organic crops and institutions can browse and request produce",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-knowledge-hub-with-educational-resources-about-organic-farming-practices-chemical-free-agriculture-methods-and-the-benefits-of-organic-produce",
+      "title": "Create a knowledge hub with educational resources about organic farming practices, chemical-free agriculture methods, and the benefits of organic produce",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-dashboard-showing-the-impact-of-the-platform-including-number-of-farmers-connected-institutions-served-and-volume-of-organic-produce-distributed-from-rural-to-urban-areas",
+      "title": "Implement a dashboard showing the impact of the platform including number of farmers connected, institutions served, and volume of organic produce distributed from rural to urban areas",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-warm-earth-toned-visual-theme-that-reflects-agriculture-nature-and-organic-farming-values-with-consistent-use-of-greens-browns-and-natural-imagery-throughout-the-interface",
+      "title": "Design a warm, earth-toned visual theme that reflects agriculture, nature, and organic farming values with consistent use of greens, browns, and natural imagery throughout the interface",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-farmer-salary-management-dashboard-that-displays-salary-information-payment-history-and-compensation-details-for-registered-farmers",
+      "title": "Create a farmer salary management dashboard that displays salary information, payment history, and compensation details for registered farmers",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-insurance-coverage-tracking-integrated-with-farmer-compensation-packages-allowing-farmers-to-view-their-insurance-details-and-coverage-status",
+      "title": "Implement insurance coverage tracking integrated with farmer compensation packages, allowing farmers to view their insurance details and coverage status",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-pf-provident-fund-management-and-tracking-system-where-farmers-can-view-their-pf-contributions-balance-and-withdrawal-history",
+      "title": "Create a PF (Provident Fund) management and tracking system where farmers can view their PF contributions, balance, and withdrawal history",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-assistance-request-system-where-farmers-can-submit-requests-for-technical-support-teams-post-harvest-management-help-and-other-farming-assistance-needs-with-tracking-of-request-status",
+      "title": "Build an assistance request system where farmers can submit requests for technical support teams, post-harvest management help, and other farming assistance needs, with tracking of request status",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-entire-platform-with-a-clean-modern-simplified-layout-that-replaces-the-current-earth-toned-color-palette-with-a-fresh-contemporary-color-scheme-suitable-for-a-global-professional-platform",
+      "title": "Redesign the entire platform with a clean, modern, simplified layout that replaces the current earth-toned color palette with a fresh, contemporary color scheme suitable for a global professional platform",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-platform-with-support-for-displaying-pictures-and-videos-throughout-the-interface-including-in-farmer-profiles-produce-listings-knowledge-hub-articles-and-assistance-requests",
+      "title": "Enhance the platform with support for displaying pictures and videos throughout the interface, including in farmer profiles, produce listings, knowledge hub articles, and assistance requests",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-navigation-system-to-be-more-intuitive-and-user-friendly-with-clear-menu-structure-improved-mobile-responsiveness-and-easier-access-to-key-features-for-farmers-and-institutions",
+      "title": "Redesign the navigation system to be more intuitive and user-friendly, with clear menu structure, improved mobile responsiveness, and easier access to key features for farmers and institutions",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-multi-language-support-infrastructure-that-allows-the-platform-interface-to-be-displayed-in-local-languages-with-language-selection-available-to-users",
+      "title": "Implement multi-language support infrastructure that allows the platform interface to be displayed in local languages, with language selection available to users",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-text-based-chat-assistance-system-for-farmers-to-get-help-with-platform-features-farming-questions-and-assistance-requests-without-requiring-voice-processing",
+      "title": "Create a text-based chat assistance system for farmers to get help with platform features, farming questions, and assistance requests without requiring voice processing",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-rural-urban-flow-visualization-with-a-visual-directory-organized-by-region-and-district-allowing-farmers-and-institutions-to-browse-and-filter-by-geographic-location",
+      "title": "Replace the current rural-urban flow visualization with a visual directory organized by region and district, allowing farmers and institutions to browse and filter by geographic location",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-prominent-clear-call-to-action-buttons-throughout-the-platform-that-guide-users-to-key-actions-like-registering-creating-listings-submitting-requests-and-accessing-assistance",
+      "title": "Add prominent, clear call-to-action buttons throughout the platform that guide users to key actions like registering, creating listings, submitting requests, and accessing assistance",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-captions-and-content-presentation-across-all-pages-with-better-typography-spacing-and-content-hierarchy-to-enhance-readability-and-user-comprehension",
+      "title": "Improve captions and content presentation across all pages with better typography, spacing, and content hierarchy to enhance readability and user comprehension",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-2",
+      "summary": "Farmer salary management dashboard",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Insurance coverage tracking integrated with farmer compensation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "PF (Provident Fund) management and tracking system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Assistance request system for farmers to request technical support, post-harvest management help, and other farming assistance",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Clean, modern, simplified layout with enhanced picture and video support",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Multi-language support infrastructure for local languages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Text-based chat assistance for farmers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Visual directory organized by region/district",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Fresh modern color palette replacing earth tones with prominent call-to-action buttons",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Farm Bridge",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

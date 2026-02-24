@@ -1,0 +1,274 @@
+{
+  "kind": "build_request",
+  "title": "Add farmer salary and benefits system with modern UI redesign",
+  "projectName": "Farm Bridge Global",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Create a farmer salary management dashboard that displays salary information, payment history, and compensation details for registered farmers",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Farmer salary management dashboard",
+          "farmer salary ststem across world"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard displays current salary information for logged-in farmers",
+        "Payment history is visible with dates and amounts",
+        "Compensation breakdown shows base salary and additional components"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement insurance coverage tracking integrated with farmer compensation packages, allowing farmers to view their insurance details and coverage status",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Insurance coverage tracking (as part of compensation)",
+          "insurance will be included"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Farmers can view their insurance coverage details",
+        "Insurance status is displayed as part of compensation package",
+        "Insurance information is stored in farmer profile data"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a PF (Provident Fund) management and tracking system where farmers can view their PF contributions, balance, and withdrawal history",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "PF (Provident Fund) management",
+          "pf"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Farmers can view their PF account balance",
+        "Contribution history is displayed with dates and amounts",
+        "PF information is integrated into the farmer profile"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Build an assistance request system where farmers can submit requests for technical support teams, post-harvest management help, and other farming assistance needs, with tracking of request status",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "farmer can register there for any type of assistance",
+          "like might farmer need technical team or post harvest management"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Farmers can submit assistance requests with type selection (technical support, post-harvest management, other)",
+        "Request form captures detailed description of assistance needed",
+        "Farmers can view their submitted requests with status tracking",
+        "Request types include technical support, post-harvest management, and general assistance"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Redesign the entire platform with a clean, modern, simplified layout that replaces the current earth-toned color palette with a fresh, contemporary color scheme suitable for a global professional platform",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Clean and simple layout",
+          "Modern color palette (updating from current earth tones)",
+          "Fresh, modern color palette"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages use a clean, simplified layout with improved whitespace and visual hierarchy",
+        "New color palette replaces the existing olive greens, terracotta, and sage colors",
+        "Design is professional and suitable for a global employment platform",
+        "Color scheme is applied consistently across all components and pages"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Enhance the platform with support for displaying pictures and videos throughout the interface, including in farmer profiles, produce listings, knowledge hub articles, and assistance requests",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "picture and videos",
+          "Support for pictures and videos throughout the platform"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Farmers can upload and display profile pictures",
+        "Produce listings support image uploads",
+        "Knowledge hub articles can display educational videos and images",
+        "Assistance requests can include images to illustrate needs",
+        "Images and videos are stored and served efficiently"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Redesign the navigation system to be more intuitive and user-friendly, with clear menu structure, improved mobile responsiveness, and easier access to key features for farmers and institutions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "user friendly navigation",
+          "Intuitive, user-friendly navigation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation menu is reorganized with logical grouping of related features",
+        "Mobile navigation is smooth and easy to use",
+        "Key actions are easily accessible from the main navigation",
+        "Navigation adapts based on user type (farmer vs institution)"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Implement multi-language support infrastructure that allows the platform interface to be displayed in local languages, with language selection available to users",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "local language support",
+          "Multi-language support infrastructure for local languages"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Language selector is available in the user interface",
+        "Platform supports switching between multiple languages",
+        "All user-facing text can be translated",
+        "Selected language preference is persisted for returning users"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Create a text-based chat assistance system for farmers to get help with platform features, farming questions, and assistance requests without requiring voice processing",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Text-based chat assistance for farmers",
+          "text-based chat assistance"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Chat interface is accessible from all farmer pages",
+        "Farmers can send text messages for assistance",
+        "Chat history is preserved for reference",
+        "System provides helpful responses or routes to appropriate support"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Replace the current rural-urban flow visualization with a visual directory organized by region and district, allowing farmers and institutions to browse and filter by geographic location",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Visual directory organized by region/district",
+          "visual directory by region/district"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Directory displays farmers and institutions grouped by region",
+        "Users can filter by district within regions",
+        "Geographic distribution is clear and easy to navigate",
+        "Directory replaces the current RuralUrbanFlowVisualization component"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Add prominent, clear call-to-action buttons throughout the platform that guide users to key actions like registering, creating listings, submitting requests, and accessing assistance",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "call to action",
+          "Prominent call-to-action buttons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary CTAs are visually prominent with modern button styling",
+        "CTAs are strategically placed on key pages",
+        "Button text clearly communicates the action",
+        "CTAs adapt based on user state and authentication status"
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Improve captions and content presentation across all pages with better typography, spacing, and content hierarchy to enhance readability and user comprehension",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "caption and contain",
+          "Enhanced captions and content presentation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Text content has improved typography with clear hierarchy",
+        "Captions are descriptive and properly formatted",
+        "Content spacing and layout improve readability",
+        "All pages have consistent content presentation standards"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the Internet Identity authentication hooks (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx)",
+    "Do not edit the actor hook (frontend/src/hooks/useActor.ts)",
+    "Do not change the main entry point (frontend/src/main.tsx)",
+    "Do not modify read-only UI components in frontend/src/components/ui",
+    "Maintain the single-actor architecture in backend/main.mo",
+    "Keep all existing farmer and institution registration functionality intact",
+    "Preserve the produce marketplace, knowledge hub, and impact dashboard features",
+    "Do not integrate with external voice processing, GPS/geolocation services, or third-party APIs"
+  ],
+  "nonGoals": [
+    "Voice assistance or speech-to-text functionality",
+    "Interactive maps with GPS/geolocation",
+    "Integration with external insurance provider APIs",
+    "Real-time chat with WebSockets",
+    "Mobile app development",
+    "Integration with social media or third-party authentication"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional hero banner image showing diverse farmers working with modern technology for the homepage redesign (hero-banner.dim_1920x600.png)",
+      "Icon set for salary dashboard including salary, insurance, and PF icons in modern minimalist style (salary-icons.dim_400x400.png)",
+      "Modern farmer profile placeholder image for users without uploaded photos (default-profile.dim_300x300.png)",
+      "Visual illustration showing the assistance request workflow from farmer to support team (assistance-flow.dim_800x400.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,499 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add farmer salary and benefits system with modern UI redesign",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Create a farmer salary management dashboard displaying salary information, payment history, and compensation details",
+      "acceptanceCriteria": [
+        "Dashboard displays current salary information for logged-in farmers",
+        "Payment history is visible with dates and amounts",
+        "Compensation breakdown shows base salary and additional components"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/SalaryDashboardPage.tsx",
+          "operation": "create",
+          "description": "Create a comprehensive salary dashboard page for farmers displaying current compensation, base salary breakdown, bonuses, total compensation, and payment history table with dates and amounts. Use the authorization component to ensure only authenticated farmers can access. Include visual cards using MetricCard component for key salary metrics. Reference the generated salary-icons.dim_400x400.png from frontend/public/assets/generated/salary-icons.dim_400x400.png for visual elements."
+        },
+        {
+          "path": "frontend/src/components/SalaryHistoryTable.tsx",
+          "operation": "create",
+          "description": "Create a reusable table component to display salary payment history with columns for month/year, base salary, bonuses, compensation, total, and payment date. Include sorting and filtering capabilities for date ranges."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add React Query hooks for fetching farmer compensation data (useGetFarmerCompensation) using the backend's getFarmerCompensation method. Include proper error handling and loading states."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route for the salary dashboard at /salary-dashboard that renders SalaryDashboardPage. Ensure the route is accessible to authenticated farmers only."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add a navigation link to the salary dashboard in the main navigation menu, visible only to farmers. Place it after 'My Listings' in the farmer-specific menu section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement insurance coverage tracking integrated with farmer compensation packages",
+      "acceptanceCriteria": [
+        "Farmers can view their insurance coverage details",
+        "Insurance status is displayed as part of compensation package",
+        "Insurance information is stored in farmer profile data"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/InsuranceCoverageCard.tsx",
+          "operation": "create",
+          "description": "Create a card component displaying insurance plan details including plan type (basic/comprehensive/premium), coverage amount, and monthly premium. Use the authorization component to ensure only authenticated farmers can view. Reference the generated salary-icons.dim_400x400.png from frontend/public/assets/generated/salary-icons.dim_400x400.png for insurance icon visual."
+        },
+        {
+          "path": "frontend/src/pages/SalaryDashboardPage.tsx",
+          "operation": "modify",
+          "description": "Integrate InsuranceCoverageCard component into the salary dashboard, displaying it alongside salary information as part of the overall compensation package view."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create a PF (Provident Fund) management and tracking system for farmers",
+      "acceptanceCriteria": [
+        "Farmers can view their PF account balance",
+        "Contribution history is displayed with dates and amounts",
+        "PF information is integrated into the farmer profile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PFAccountPage.tsx",
+          "operation": "create",
+          "description": "Create a dedicated PF account page showing total balance, contribution history table with year, month, contribution amounts, withdrawals, accrued interest, and running balance. Use the authorization component to ensure only authenticated farmers can access. Reference the generated salary-icons.dim_400x400.png from frontend/public/assets/generated/salary-icons.dim_400x400.png for PF icon visual."
+        },
+        {
+          "path": "frontend/src/components/PFStatementTable.tsx",
+          "operation": "create",
+          "description": "Create a table component displaying yearly PF statements with columns for year, month, contribution, withdrawal, interest accrued, and balance. Include sorting by date and visual indicators for positive/negative changes."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add React Query hook for fetching PF account data (useGetMyPFAccount) using the backend's getMyPFAccount method. Include proper error handling and loading states."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route for the PF account page at /pf-account that renders PFAccountPage. Ensure the route is accessible to authenticated farmers only."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add a navigation link to the PF account page in the main navigation menu, visible only to farmers. Place it after the salary dashboard link in the farmer-specific menu section."
+        },
+        {
+          "path": "frontend/src/pages/SalaryDashboardPage.tsx",
+          "operation": "modify",
+          "description": "Add a summary card showing current PF balance with a link to the full PF account page, integrating PF information into the overall compensation view."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Build an assistance request system where farmers can submit and track requests for technical support and farming assistance",
+      "acceptanceCriteria": [
+        "Farmers can submit assistance requests with type selection (technical support, post-harvest management, other)",
+        "Request form captures detailed description of assistance needed",
+        "Farmers can view their submitted requests with status tracking",
+        "Request types include technical support, post-harvest management, and general assistance"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AssistanceRequestPage.tsx",
+          "operation": "create",
+          "description": "Create a page for farmers to submit new assistance requests with a form including assistance type dropdown (technical support, post-harvest management, equipment loan, other), description textarea, and image upload support using the blob-storage component. Use the authorization component to ensure only authenticated farmers can submit requests. Verify the blob-storage component's usage instructions before implementing. Reference the generated assistance-flow.dim_800x400.png from frontend/public/assets/generated/assistance-flow.dim_800x400.png to illustrate the assistance workflow."
+        },
+        {
+          "path": "frontend/src/components/AssistanceRequestForm.tsx",
+          "operation": "create",
+          "description": "Create a reusable form component for submitting assistance requests with fields for assistance type selection, detailed description input, and multiple image upload capability using the blob-storage component. Verify the blob-storage component's usage instructions before implementing. Include validation and submission handling."
+        },
+        {
+          "path": "frontend/src/components/AssistanceRequestCard.tsx",
+          "operation": "create",
+          "description": "Create a card component to display individual assistance request details including request ID, type, description excerpt, submission date, status badge (pending/in-progress/completed), and action to view full details. Support displaying uploaded images using the blob-storage component. Verify the blob-storage component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/MyRequestsPage.tsx",
+          "operation": "modify",
+          "description": "Rename from institution-focused produce requests to a tabbed page showing both produce requests (for institutions) and assistance requests (for farmers). Add tabs to switch between request types based on user type. For farmers, display assistance requests using AssistanceRequestCard components with status tracking."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add React Query hooks for assistance requests: useGetMyAssistanceRequests (fetches farmer's requests), useSubmitAssistanceRequest (mutation to create new request with image upload support using blob-storage), and useUpdateAssistanceRequestStatus (admin mutation to update status). Verify the blob-storage component's usage instructions before implementing the image upload logic."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route for the assistance request submission page at /assistance-request that renders AssistanceRequestPage. Ensure the route is accessible to authenticated farmers only."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add a navigation link for 'Request Assistance' in the main navigation menu, visible only to farmers. Place it in the farmer-specific menu section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Redesign the entire platform with a clean, modern, simplified layout and fresh contemporary color scheme",
+      "acceptanceCriteria": [
+        "All pages use a clean, simplified layout with improved whitespace and visual hierarchy",
+        "New color palette replaces the existing olive greens, terracotta, and sage colors",
+        "Design is professional and suitable for a global employment platform",
+        "Color scheme is applied consistently across all components and pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace the existing earth-toned color palette (olive greens, terracotta, sage) with a modern, professional color scheme suitable for a global employment platform. Update CSS custom properties for primary, secondary, accent, background, foreground, and semantic colors (success, warning, error) using contemporary colors. Maintain the OKLCH color space format but use fresh, modern values (e.g., blues, teals, neutrals instead of earthy tones). Ensure both light and dark theme variants are updated consistently."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Update the Tailwind configuration to align with the new modern color palette. Adjust color references to match the updated CSS variables in index.css. Ensure the color scheme is consistent across all utility classes and design tokens."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Redesign the layout component with improved spacing, cleaner navigation structure, and modern visual hierarchy. Update header styling to use the new color palette. Improve mobile responsiveness with better breakpoints and touch-friendly navigation. Add more whitespace and breathing room between sections."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Redesign the homepage with a clean, modern layout featuring improved visual hierarchy, generous whitespace, and the new color palette. Update the hero section to use the generated hero-banner.dim_1920x600.png from frontend/public/assets/generated/hero-banner.dim_1920x600.png as a background image. Simplify the feature cards with modern card designs and clear call-to-action buttons using contemporary styling."
+        },
+        {
+          "path": "frontend/src/pages/DashboardPage.tsx",
+          "operation": "modify",
+          "description": "Apply the modern design system with improved layout spacing, updated color palette, and cleaner metric card presentations. Enhance visual hierarchy and ensure consistent styling with the new design language."
+        },
+        {
+          "path": "frontend/src/pages/MarketplacePage.tsx",
+          "operation": "modify",
+          "description": "Redesign the marketplace page with a clean, modern grid layout, improved filtering interface, and updated color scheme. Apply generous spacing and modern card designs for produce listings."
+        },
+        {
+          "path": "frontend/src/pages/KnowledgeHubPage.tsx",
+          "operation": "modify",
+          "description": "Apply the modern design system with improved layout, updated color palette for topic badges, and cleaner article card presentations. Enhance the FAQ section with modern accordion styling."
+        },
+        {
+          "path": "frontend/src/components/MetricCard.tsx",
+          "operation": "modify",
+          "description": "Redesign the metric card component with modern styling, improved typography, better spacing, and updated colors from the new palette. Add subtle shadows and hover effects for a contemporary feel."
+        },
+        {
+          "path": "frontend/src/components/ProduceListingCard.tsx",
+          "operation": "modify",
+          "description": "Update the produce listing card with modern card design, improved spacing, updated color palette, and contemporary button styling. Add better visual hierarchy for price and quantity information."
+        },
+        {
+          "path": "frontend/src/components/KnowledgeArticleCard.tsx",
+          "operation": "modify",
+          "description": "Redesign the article card with modern styling, updated topic badge colors from the new palette, improved typography, and better spacing. Enhance the dialog presentation with contemporary modal design."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Enhance the platform with support for displaying pictures and videos throughout the interface",
+      "acceptanceCriteria": [
+        "Farmers can upload and display profile pictures",
+        "Produce listings support image uploads",
+        "Knowledge hub articles can display educational videos and images",
+        "Assistance requests can include images to illustrate needs",
+        "Images and videos are stored and served efficiently"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/FarmerRegistrationPage.tsx",
+          "operation": "modify",
+          "description": "Add profile picture upload field to the farmer registration form using the blob-storage component. Verify the blob-storage component's usage instructions before implementing. Use the generated default-profile.dim_300x300.png from frontend/public/assets/generated/default-profile.dim_300x300.png as a placeholder for farmers without uploaded photos."
+        },
+        {
+          "path": "frontend/src/components/CreateListingForm.tsx",
+          "operation": "modify",
+          "description": "Add image and video upload fields to the produce listing form using the blob-storage component. Include validation for file types and sizes. Verify the blob-storage component's usage instructions before implementing, including upload progress tracking using withUploadProgress."
+        },
+        {
+          "path": "frontend/src/components/ProduceListingCard.tsx",
+          "operation": "modify",
+          "description": "Enhance the produce listing card to display uploaded listing images and video thumbnails using the blob-storage component's getDirectURL() method for efficient streaming and caching. Verify the blob-storage component's usage instructions before implementing. Add a fallback to display placeholder images when no media is uploaded."
+        },
+        {
+          "path": "frontend/src/pages/KnowledgeHubPage.tsx",
+          "operation": "modify",
+          "description": "Add functionality to display images and videos within knowledge hub articles using the blob-storage component's getDirectURL() method. Verify the blob-storage component's usage instructions before implementing. Enhance article display with embedded media galleries where applicable."
+        },
+        {
+          "path": "frontend/src/components/KnowledgeArticleCard.tsx",
+          "operation": "modify",
+          "description": "Update article cards to display thumbnail images and video indicators when media is present using the blob-storage component. Verify the blob-storage component's usage instructions before implementing. Include media count badges to show available content."
+        },
+        {
+          "path": "frontend/src/components/AssistanceRequestForm.tsx",
+          "operation": "modify",
+          "description": "Add multiple image upload capability and optional video upload to the assistance request form using the blob-storage component. Verify the blob-storage component's usage instructions before implementing, including upload progress tracking. Include preview functionality for uploaded media."
+        },
+        {
+          "path": "frontend/src/components/AssistanceRequestCard.tsx",
+          "operation": "modify",
+          "description": "Display uploaded images and videos in assistance request cards using the blob-storage component's getDirectURL() method for efficient streaming. Verify the blob-storage component's usage instructions before implementing. Show image thumbnails with lightbox expansion capability."
+        },
+        {
+          "path": "frontend/src/components/ImageUploader.tsx",
+          "operation": "create",
+          "description": "Create a reusable image upload component with drag-and-drop support, preview functionality, and progress tracking using the blob-storage component's withUploadProgress method. Verify the blob-storage component's usage instructions before implementing. Include validation for file types and size limits."
+        },
+        {
+          "path": "frontend/src/components/VideoUploader.tsx",
+          "operation": "create",
+          "description": "Create a reusable video upload component with preview, progress tracking using the blob-storage component's withUploadProgress method, and validation for video file types and sizes. Verify the blob-storage component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Redesign the navigation system to be more intuitive and user-friendly with improved mobile responsiveness",
+      "acceptanceCriteria": [
+        "Navigation menu is reorganized with logical grouping of related features",
+        "Mobile navigation is smooth and easy to use",
+        "Key actions are easily accessible from the main navigation",
+        "Navigation adapts based on user type (farmer vs institution)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Redesign the navigation structure with logical grouping: 'Dashboard' and 'Marketplace' as primary links; farmer-specific group including 'My Listings', 'Salary Dashboard', 'PF Account', 'Request Assistance', and 'My Requests'; institution-specific group including 'My Requests'; and 'Knowledge Hub' as a general link. Improve mobile menu with smooth slide-in animation, larger touch targets, and better visual hierarchy. Ensure navigation adapts based on user type using conditional rendering."
+        },
+        {
+          "path": "frontend/src/components/MobileMenu.tsx",
+          "operation": "create",
+          "description": "Create a dedicated mobile navigation component with smooth slide-in/slide-out animation, improved touch targets, and user-type-specific menu items. Include backdrop overlay and close-on-outside-click functionality. Ensure accessibility with proper ARIA labels and keyboard navigation."
+        },
+        {
+          "path": "frontend/src/components/NavigationGroup.tsx",
+          "operation": "create",
+          "description": "Create a reusable navigation group component for organizing related links with collapsible sections on mobile. Support group labels, icon support, and active state highlighting."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Implement multi-language support infrastructure with language selection",
+      "acceptanceCriteria": [
+        "Language selector is available in the user interface",
+        "Platform supports switching between multiple languages",
+        "All user-facing text can be translated",
+        "Selected language preference is persisted for returning users"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/contexts/LanguageContext.tsx",
+          "operation": "create",
+          "description": "Create a language context provider managing language state, translation loading, and language switching. Support persisting language preference in localStorage. Initialize with English as default and support adding additional languages."
+        },
+        {
+          "path": "frontend/src/hooks/useTranslation.ts",
+          "operation": "create",
+          "description": "Create a custom hook for accessing translations with fallback support. Return translation function, current language, and language switching function. Handle missing translations gracefully."
+        },
+        {
+          "path": "frontend/src/locales/en.json",
+          "operation": "create",
+          "description": "Create English translation file with all user-facing strings organized by page/component. Include navigation labels, form labels, button text, error messages, and content text. Use nested structure for organization."
+        },
+        {
+          "path": "frontend/src/locales/index.ts",
+          "operation": "create",
+          "description": "Create locale loader that dynamically imports translation files and provides type-safe access to translations. Export supported languages list and default language."
+        },
+        {
+          "path": "frontend/src/components/LanguageSelector.tsx",
+          "operation": "create",
+          "description": "Create a language selector dropdown component displaying available languages with flags or language codes. Include language switching functionality and persist selection to localStorage. Style consistently with the new modern design palette."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add LanguageSelector component to the header navigation area, positioned near the user profile section. Ensure it's accessible on all pages and visible on mobile."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Wrap the App component with LanguageContext provider to enable translation support throughout the application."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Create a text-based chat assistance system for farmers to get help",
+      "acceptanceCriteria": [
+        "Chat interface is accessible from all farmer pages",
+        "Farmers can send text messages for assistance",
+        "Chat history is preserved for reference",
+        "System provides helpful responses or routes to appropriate support"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ChatWidget.tsx",
+          "operation": "create",
+          "description": "Create a floating chat widget component with a toggle button (positioned bottom-right) that opens a chat panel. Include message list display, text input, and send button. Use the authorization component to ensure only authenticated farmers can access. Display chat history from backend using the getChatHistory method."
+        },
+        {
+          "path": "frontend/src/components/ChatMessage.tsx",
+          "operation": "create",
+          "description": "Create a message bubble component differentiating user and assistant messages with different styling and alignment. Include timestamp display and message type indicators."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add React Query hooks for chat functionality: useGetChatHistory (fetches chat messages), useAddChatMessage (mutation to send new message). Include proper polling or refetching strategy to keep chat updated."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Integrate ChatWidget component into the layout, making it available on all pages for authenticated farmers. Position it in the bottom-right corner with appropriate z-index to float above other content."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Replace the current rural-urban flow visualization with a visual directory organized by region and district",
+      "acceptanceCriteria": [
+        "Directory displays farmers and institutions grouped by region",
+        "Users can filter by district within regions",
+        "Geographic distribution is clear and easy to navigate",
+        "Directory replaces the current RuralUrbanFlowVisualization component"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GeographicDirectory.tsx",
+          "operation": "create",
+          "description": "Create a new directory component displaying farmers and institutions organized by region and district. Include region cards with district filtering, counts of farmers and institutions per location, and navigation to view entities within each area. Replace the RuralUrbanFlowVisualization component usage with this new directory."
+        },
+        {
+          "path": "frontend/src/components/RegionCard.tsx",
+          "operation": "create",
+          "description": "Create a region card component displaying region name, total farmers and institutions count, and a list of districts with their respective counts. Include expand/collapse functionality for district details."
+        },
+        {
+          "path": "frontend/src/pages/DashboardPage.tsx",
+          "operation": "modify",
+          "description": "Replace the RuralUrbanFlowVisualization component with the new GeographicDirectory component. Update the page layout to accommodate the directory structure and ensure it integrates well with the dashboard metrics."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Add prominent, clear call-to-action buttons throughout the platform",
+      "acceptanceCriteria": [
+        "Primary CTAs are visually prominent with modern button styling",
+        "CTAs are strategically placed on key pages",
+        "Button text clearly communicates the action",
+        "CTAs adapt based on user state and authentication status"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CTAButton.tsx",
+          "operation": "create",
+          "description": "Create a reusable primary call-to-action button component with prominent styling using the new modern color palette. Include variants for different sizes and states (default, hover, disabled, loading). Support icon integration for enhanced visual communication."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add prominent CTAs using the CTAButton component: 'Get Started' for anonymous users, 'Register as Farmer' and 'Register as Institution' for authenticated but unregistered users, 'Explore Marketplace' and 'View Dashboard' for registered users. Position CTAs strategically in the hero section and feature sections."
+        },
+        {
+          "path": "frontend/src/pages/MarketplacePage.tsx",
+          "operation": "modify",
+          "description": "Add prominent 'Create Listing' CTA for farmers using the CTAButton component. Position it prominently at the top of the page before the produce listings. For institutions, add 'Browse by Category' CTA."
+        },
+        {
+          "path": "frontend/src/pages/KnowledgeHubPage.tsx",
+          "operation": "modify",
+          "description": "Add 'Contribute Article' CTA for authenticated users using the CTAButton component (if applicable). Position it prominently to encourage content contribution."
+        },
+        {
+          "path": "frontend/src/pages/DashboardPage.tsx",
+          "operation": "modify",
+          "description": "Add contextual CTAs for quick actions using the CTAButton component: 'Create Listing', 'Request Assistance', 'View Salary' for farmers; 'Browse Marketplace', 'View Requests' for institutions. Position them strategically near relevant metrics."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Improve captions and content presentation with better typography, spacing, and content hierarchy",
+      "acceptanceCriteria": [
+        "Text content has improved typography with clear hierarchy",
+        "Captions are descriptive and properly formatted",
+        "Content spacing and layout improve readability",
+        "All pages have consistent content presentation standards"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Enhance typography system with improved font sizes, line heights, and spacing for headings, body text, and captions. Add utility classes for consistent text hierarchy (heading-1, heading-2, body-large, body-default, caption, label). Improve overall readability with better line-height and letter-spacing values."
+        },
+        {
+          "path": "frontend/src/components/SectionHeading.tsx",
+          "operation": "create",
+          "description": "Create a reusable section heading component with consistent styling, optional subtitle/caption support, and proper semantic HTML. Include variants for different heading levels (h1, h2, h3) with corresponding visual hierarchy."
+        },
+        {
+          "path": "frontend/src/components/ContentCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable content card component with improved spacing, typography hierarchy, caption support, and modern styling. Use for consistent content presentation across pages."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Improve content presentation with SectionHeading components, enhanced spacing between sections, better caption formatting for feature descriptions, and consistent typography hierarchy throughout the page."
+        },
+        {
+          "path": "frontend/src/pages/MarketplacePage.tsx",
+          "operation": "modify",
+          "description": "Enhance content presentation with improved section headings, better captions for produce listings, consistent spacing, and clear visual hierarchy. Add descriptive text and instructions with proper formatting."
+        },
+        {
+          "path": "frontend/src/pages/KnowledgeHubPage.tsx",
+          "operation": "modify",
+          "description": "Improve typography and content hierarchy with enhanced section headings, better formatted article captions and descriptions, improved spacing between elements, and consistent text styling throughout."
+        },
+        {
+          "path": "frontend/src/pages/DashboardPage.tsx",
+          "operation": "modify",
+          "description": "Enhance content presentation with improved metric labels, better captions for data visualizations, consistent spacing, and clear typography hierarchy. Add descriptive text for dashboard sections."
+        },
+        {
+          "path": "frontend/src/pages/FarmerRegistrationPage.tsx",
+          "operation": "modify",
+          "description": "Improve form presentation with better field labels, helpful captions for inputs, improved spacing between form sections, and consistent typography. Add descriptive text explaining registration requirements."
+        },
+        {
+          "path": "frontend/src/pages/InstitutionRegistrationPage.tsx",
+          "operation": "modify",
+          "description": "Enhance form presentation with improved labels, helpful captions, better spacing, and consistent typography. Add descriptive text explaining the registration process and benefits."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-farmer-salary-management-dashboard-that-displays-salary-information-payment-history-and-compensation-details-for-registered-farmers",
+      "featureTitle": "Create a farmer salary management dashboard that displays salary information, payment history, and compensation details for registered farmers",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/SalaryHistoryTable.tsx",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/pages/SalaryDashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-insurance-coverage-tracking-integrated-with-farmer-compensation-packages-allowing-farmers-to-view-their-insurance-details-and-coverage-status",
+      "featureTitle": "Implement insurance coverage tracking integrated with farmer compensation packages, allowing farmers to view their insurance details and coverage status",
+      "files": [
+        "frontend/src/components/InsuranceCoverageCard.tsx",
+        "frontend/src/pages/SalaryDashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-pf-provident-fund-management-and-tracking-system-where-farmers-can-view-their-pf-contributions-balance-and-withdrawal-history",
+      "featureTitle": "Create a PF (Provident Fund) management and tracking system where farmers can view their PF contributions, balance, and withdrawal history",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/PFStatementTable.tsx",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/pages/PFAccountPage.tsx",
+        "frontend/src/pages/SalaryDashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-an-assistance-request-system-where-farmers-can-submit-requests-for-technical-support-teams-post-harvest-management-help-and-other-farming-assistance-needs-with-tracking-of-request-status",
+      "featureTitle": "Build an assistance request system where farmers can submit requests for technical support teams, post-harvest management help, and other farming assistance needs, with tracking of request status",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/AssistanceRequestCard.tsx",
+        "frontend/src/components/AssistanceRequestForm.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/pages/AssistanceRequestPage.tsx",
+        "frontend/src/pages/MyRequestsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-entire-platform-with-a-clean-modern-simplified-layout-that-replaces-the-current-earth-toned-color-palette-with-a-fresh-contemporary-color-scheme-suitable-for-a-global-professional-platform",
+      "featureTitle": "Redesign the entire platform with a clean, modern, simplified layout that replaces the current earth-toned color palette with a fresh, contemporary color scheme suitable for a global professional platform",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/MetricCard.tsx",
+        "frontend/src/components/ProduceListingCard.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/DashboardPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/MarketplacePage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-enhance-the-platform-with-support-for-displaying-pictures-and-videos-throughout-the-interface-including-in-farmer-profiles-produce-listings-knowledge-hub-articles-and-assistance-requests",
+      "featureTitle": "Enhance the platform with support for displaying pictures and videos throughout the interface, including in farmer profiles, produce listings, knowledge hub articles, and assistance requests",
+      "files": [
+        "frontend/src/components/AssistanceRequestCard.tsx",
+        "frontend/src/components/AssistanceRequestForm.tsx",
+        "frontend/src/components/ImageUploader.tsx",
+        "frontend/src/components/ProduceListingCard.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-the-navigation-system-to-be-more-intuitive-and-user-friendly-with-clear-menu-structure-improved-mobile-responsiveness-and-easier-access-to-key-features-for-farmers-and-institutions",
+      "featureTitle": "Redesign the navigation system to be more intuitive and user-friendly, with clear menu structure, improved mobile responsiveness, and easier access to key features for farmers and institutions",
+      "files": [
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-multi-language-support-infrastructure-that-allows-the-platform-interface-to-be-displayed-in-local-languages-with-language-selection-available-to-users",
+      "featureTitle": "Implement multi-language support infrastructure that allows the platform interface to be displayed in local languages, with language selection available to users",
+      "files": [
+        "frontend/src/components/LanguageSelector.tsx",
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-text-based-chat-assistance-system-for-farmers-to-get-help-with-platform-features-farming-questions-and-assistance-requests-without-requiring-voice-processing",
+      "featureTitle": "Create a text-based chat assistance system for farmers to get help with platform features, farming questions, and assistance requests without requiring voice processing",
+      "files": [
+        "frontend/src/components/ChatMessage.tsx",
+        "frontend/src/components/ChatWidget.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/hooks/useQueries.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-current-rural-urban-flow-visualization-with-a-visual-directory-organized-by-region-and-district-allowing-farmers-and-institutions-to-browse-and-filter-by-geographic-location",
+      "featureTitle": "Replace the current rural-urban flow visualization with a visual directory organized by region and district, allowing farmers and institutions to browse and filter by geographic location",
+      "files": [
+        "frontend/src/components/GeographicDirectory.tsx",
+        "frontend/src/components/RegionCard.tsx",
+        "frontend/src/pages/DashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-prominent-clear-call-to-action-buttons-throughout-the-platform-that-guide-users-to-key-actions-like-registering-creating-listings-submitting-requests-and-accessing-assistance",
+      "featureTitle": "Add prominent, clear call-to-action buttons throughout the platform that guide users to key actions like registering, creating listings, submitting requests, and accessing assistance",
+      "files": [
+        "frontend/src/components/CTAButton.tsx",
+        "frontend/src/pages/DashboardPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/MarketplacePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-improve-captions-and-content-presentation-across-all-pages-with-better-typography-spacing-and-content-hierarchy-to-enhance-readability-and-user-comprehension",
+      "featureTitle": "Improve captions and content presentation across all pages with better typography, spacing, and content hierarchy to enhance readability and user comprehension",
+      "files": [
+        "frontend/src/components/SectionHeading.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/DashboardPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/MarketplacePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
